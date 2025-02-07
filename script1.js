@@ -106,5 +106,4 @@ const content = document.getElementById("content");
         renderContactList();
       }
 
-      // Initial view
-      showView("home");
+showView("home");
