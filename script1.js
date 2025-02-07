@@ -8,6 +8,34 @@ const content = document.getElementById("content");
             content.innerHTML = `
               <h1>Phone Book Application</h1>
               <p>Welcome to your contact management system</p>
+              
+              <img src="https://i.pinimg.com/736x/6c/99/97/6c9997ef2fef597426700a1744d59341--old-mans-the-streets.jpg" width="200px" height="200px">
+               <table>
+        <tr><td>id</td>
+        <td>1</td></tr>
+        <tr><td>First Name</td>
+        <td>henry</td></tr>
+        <tr><td>Last Name</td>
+        <td>Potter</td></tr>
+        <tr><td>gender</td>
+        <td>male</td></tr>
+        <tr><td>date-of-birth</td>
+        <td>23/11/1990</td></tr>
+        <tr><td>Email address</td>
+        <td>fdhdhdgyg@cdn.com</td></tr>
+        <tr><td>Phone number</td>
+        <td>+9198765432</td></tr>
+        <tr><td>city</td>
+        <td>chicago</td></tr>
+        <tr><td>state</td>
+        <td>california</td></tr>
+        <tr><td>country</td>
+        <td>unied states</td></tr>
+        <tr>
+            <td><button style="background-color: green;">edit</button></td>
+            <td><button style="background-color: red;">delete</button></td>
+        </tr>
+    </table>
             `;
             break;
           case "list":
