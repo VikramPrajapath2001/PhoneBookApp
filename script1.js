@@ -92,7 +92,7 @@ const content = document.getElementById("content");
             <input type="date" name="dob" value="${contact.dob || ""}" required>
             <input type="email" name="email" placeholder="Email"
                    value="${contact.email || ""}" required>
-            <input type="tel" name="phone" placeholder="Phone" min=10
+            <input type="tel" name="phone" placeholder="Phone" pattern="[0-9]{10}"
                    value="${contact.phone || ""}" required>
             <input type="text" name="city" placeholder="City"
                    value="${contact.city || ""}" required>
