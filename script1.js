@@ -2,40 +2,48 @@ let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
 let editingContactId = null;
 
 function showView(view) {
-  const content = document.getElementById("content");
+    const content = document.getElementById("content");
+    
+  
+    switch (view) {
+      case "home":
+        content.innerHTML = `
+        
+          <div class="card">
+            <h3>Phone Book Application</h3>
+            <p>Welcome to contact management system</p>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/6c/99/97/6c9997ef2fef597426700a1744d59341--old-mans-the-streets.jpg" width="200px" height="200px">
+            </div>
 
-  switch (view) {
-    case "home":
-      content.innerHTML = `
-        <h3>Phone Book Application</h3>
-        <p>Welcome to contact management system</p>
-        <img src="https://i.pinimg.com/736x/6c/99/97/6c9997ef2fef597426700a1744d59341--old-mans-the-streets.jpg" width="200px" height="200px">
-        <table>
-          <tr><td>id</td><td>1</td></tr>
-          <tr><td>First Name</td><td>Henry</td></tr>
-          <tr><td>Last Name</td><td>Potter</td></tr>
-          <tr><td>gender</td><td>male</td></tr>
-          <tr><td>date-of-birth</td><td>23/11/1990</td></tr>
-          <tr><td>Email address</td><td>fdhdhdgyg@cdn.com</td></tr>
-          <tr><td>Phone number</td><td>9198765432</td></tr>
-          <tr><td>city</td><td>chicago</td></tr>
-          <tr><td>state</td><td>california</td></tr>
-          <tr><td>country</td><td>united states</td></tr>
-          <tr>
-            <td><button style="background-color: green;">edit</button></td>
-            <td><button style="background-color: red;">delete</button></td>
-          </tr>
-        </table>
-      `;
-      break;
-    case "list":
-      renderContactList();
-      break;
-    case "add":
-      renderContactForm();
-      break;
+            <table>
+              <tr><td>id</td><td>1</td></tr>
+              <tr><td>First Name</td><td>Henry</td></tr>
+              <tr><td>Last Name</td><td>Potter</td></tr>
+              <tr><td>gender</td><td>male</td></tr>
+              <tr><td>date-of-birth</td><td>23/11/1990</td></tr>
+              <tr><td>Email address</td><td>fdhdhdgyg@cdn.com</td></tr>
+              <tr><td>Phone number</td><td>9198765432</td></tr>
+              <tr><td>city</td><td>chicago</td></tr>
+              <tr><td>state</td><td>california</td></tr>
+              <tr><td>country</td><td>united states</td></tr>
+              <tr>
+                <td><button class="edit-btn">edit</button></td>
+                <td><button class="delete-btn">delete</button></td>
+              </tr>
+            </table>
+          </div>
+        `;
+        break;
+      case "list":
+        renderContactList();
+        break;
+      case "add":
+        renderContactForm();
+        break;
+    }
   }
-}
+  
 
 function renderContactList() {
   const content = document.getElementById("content");
