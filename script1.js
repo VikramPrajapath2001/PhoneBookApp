@@ -28,13 +28,14 @@ const content = document.getElementById("content");
               (contact) => `
               <div class="contact-card">
                 <img src="images/${contact.avatar}"
-                     onerror="this.src='/default-avatar.png'"
+                     onerror="this.src='images/laptop.jpg'"
                      alt="${contact.firstname} ${contact.lastname}">
                 <div>
                   <h3>${contact.firstname} ${contact.lastname}</h3>
                   <p>${contact.country}</p>
-                  <button onclick="editContact(${contact.id})">Edit</button>
-                  <button onclick="deleteContact(${contact.id})">Delete</button>
+                  <button class="btn btn-success" onclick="editContact(${contact.id})">Edit</button>
+                  <button type="button" class="btn btn-danger" onclick="deleteContact(${contact.id})">Delete</button>
+
                 </div>
               </div>
             `
